@@ -41,6 +41,6 @@ baseurl: '/kafka'
 
 ## 部署
 
-仓库保留了 GitHub Pages Actions 流程。推送 `main` 分支后，Actions 会执行 Jekyll 构建、评论索引生成、热门文章生成、压缩和站点检查。
+仓库保留了 GitHub Pages Actions 流程。推送 `main` 分支后，Actions 会执行 Jekyll 构建、热门文章生成、压缩和站点检查。
 
 GitHub Pages 的 `Source` 需要选择 `GitHub Actions`。如果使用项目仓库路径或反向代理子路径部署，必须保持 `baseurl: '/kafka'`。

@@ -8,47 +8,49 @@ web
 
 ## Stack
 
-Jekyll static site, vanilla HTML/CSS/JavaScript, deployed by GitHub Pages. The repository already contains the build workflow and asset pipeline; no framework migration is part of this redesign.
+Jekyll static site, vanilla HTML/CSS/JavaScript, deployed by GitHub Pages. The repository contains the existing build workflow, popular-post generation, asset pipeline, and site checks; no framework migration is part of this product.
 
 ## Users
 
-Assumption from the site's content and explicit redesign brief: zjc and developers who arrive looking for concrete notes on Spring Cloud Alibaba, Java microservices, component deployment, and local/production workflows. They want to scan titles and categories, search a specific term, then read long technical articles with code.
+zjc and developers who build or operate event-driven systems on Kafka. They need practical guidance on producers, consumers, partitions, replicas, transactional semantics, KRaft, capacity, reliability, security, migration, monitoring, and troubleshooting.
 
 ## Product Purpose
 
-SpringVortex Notes is a personal technical reading room. It turns hands-on project work into durable, findable articles. Success means a visitor can identify useful material quickly, read comfortably for a long time, and jump between related articles without losing context.
+Kafka 零基础实战指南 is a focused reading room for event streaming engineering. It turns a 28-chapter guide into durable, searchable articles. Success means a visitor can move from an architecture decision or production symptom to a concrete command, parameter, diagnostic flow, or reliability checklist.
 
 ## Positioning
 
-The site's distinctive material is first-hand implementation and deployment experience from a real Spring Cloud Alibaba project, not abstract framework marketing.
+The site treats Kafka as both an application integration layer and an infrastructure system. Its distinctive path connects message semantics and Spring Boot usage to log storage, replication, controllers, KRaft, performance, operations, and event-driven design.
 
 ## Operating Context
 
-Content includes the local `spring-cloud-alibaba` project, service modules, middleware deployment, configuration, observability, and troubleshooting. Readers may arrive from search, category pages, or search results and often need code, commands, tables, and source links side by side.
+Content covers setup, core concepts, command-line practice, producer and consumer internals, topic and partition management, serialization and Schema Registry, Spring Boot integration, log segments and indexes, ISR and high availability, controllers and coordinators, request handling and Purgatory, idempotence, transactions and Exactly Once, rebalance, KRaft, performance testing, capacity planning, reliability practices, monitoring, troubleshooting, security, scaling and migration, Connect, Streams and ksqlDB, log and order-event projects, big-data integration, event-driven patterns, interviews, and a quick-reference appendix. Readers often need commands, configuration, architecture notes, and reliability tables together.
 
 ## Capabilities and Constraints
 
-- Preserve existing Jekyll routes and page behavior.
-- Preserve primary Chinese navigation labels and blog content.
-- Keep desktop article recommendations and the article table of contents.
-- Keep light/dark mode, search, categories, bookmarks, about, RSS, PWA, and social sharing behavior.
+- Preserve existing Jekyll routes and article behavior.
+- Preserve primary Chinese navigation labels and article content.
+- Keep desktop popular articles and recommended reading.
+- Keep search, categories, bookmarks, about, RSS, PWA, and social sharing behavior.
 - Keep the GitHub Pages build compatible; avoid a framework or heavy runtime dependency.
+- Keep `/kafka` as the stable base path.
 
 ## Brand Commitments
 
-Site name is SpringVortex Notes. Default author is zjc. The site language is primarily Chinese. Existing logo and favicon assets are part of the brand.
+Site name is Kafka 零基础实战指南. Default author is zjc. The site language is primarily Chinese. The logo, favicon, and precise event-systems visual language are part of the brand.
 
 ## Evidence on Hand
 
-- 87 Markdown articles under `_posts/`, organized by year/month/day.
-- Real component and module notes based on the local Spring Cloud Alibaba project.
-- Existing logo, favicon, search index, RSS, and PWA assets.
+- 29 Markdown articles under `_posts/`, organized by year/month/day.
+- Article dates run from 2026-01-01 through 2026-01-29.
+- Chapters span fundamentals, client practice, storage and replication, metadata architecture, performance, operations, ecosystem, architecture, interviews, and a quick-reference appendix.
+- Existing logo, favicon, search index, RSS, and PWA assets are present.
 - No testimonials, customer claims, or commercial metrics are available; none may be invented.
 
 ## Product Principles
 
-1. Reading comprehension outranks visual spectacle.
-2. Code, commands, and tables remain first-class content.
-3. Navigation and related articles should make research feel continuous.
-4. Design should feel like a precise engineering notebook, not a generic SaaS landing page.
-5. Performance and accessibility are constraints on every visual decision.
+1. Delivery semantics and operational evidence stay explicit.
+2. Commands, configuration, tables, and architecture notes remain first-class content.
+3. Client usage and broker internals should feel connected.
+4. Reliability checklists support production decisions without replacing judgment.
+5. Performance and accessibility constrain every visual decision.

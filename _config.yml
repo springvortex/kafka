@@ -1,11 +1,11 @@
 encoding: utf-8
 
 # SEO相关信息
-title: Kafka：从 0 基础到大师
-description: Kafka：从 0 基础到大师，zjc 的独立技术书阅读站
+title: Kafka 零基础实战指南
+description: Kafka 零基础实战指南，zjc 的独立技术书阅读站
 keywords: Kafka,zjc,读书笔记,技术书,Jekyll
 author: zjc
-footerText: '© 2026 Kafka：从 0 基础到大师 · <a href="mailto:jiancai.zhong.1997@gmail.com">Contact me</a>'
+footerText: '© 2026 Kafka 零基础实战指南 · <a href="mailto:jiancai.zhong.1997@gmail.com">Contact me</a>'
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title

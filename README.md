@@ -1,4 +1,4 @@
-# Kafka：从 0 基础到大师
+# Kafka 零基础实战指南
 
 这是以 `demo/` 为只读模板生成的独立 Jekyll 阅读站。原书目录是 `../kafka-0基础到大师/`，本仓库负责把书稿按章节发布成博客站点。
 
@@ -6,7 +6,7 @@
 
 | 项 | 值 |
 |---|---|
-| 站点标题 | Kafka：从 0 基础到大师 |
+| 站点标题 | Kafka 零基础实战指南 |
 | 站点路径 | `https://uhaiin.com/kafka/` |
 | `baseurl` | `/kafka` |
 | 访问计数命名空间 | `uhaiin.com/kafka` |

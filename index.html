@@ -18,15 +18,11 @@ rail_latest_comments: true
     <h1>文章</h1>
     <p>{{ site.posts | size }} 篇笔记 · {{ site.categories | size }} 个分类</p>
   </header>
-  {%- assign ordered_posts = site.posts -%}
-  {%- if site.homePostOrder == 'asc' -%}
-  {%- assign ordered_posts = site.posts | sort: 'date' -%}
-  {%- endif -%}
-  {% for post in ordered_posts  -%}
+  {% for post in site.posts  -%}
     {%- capture post_year %}{{ post.date | date: "%Y" }}{% endcapture -%}
-    {%- assign next_post = ordered_posts[forloop.index] -%}
-    {%- capture next_post_year %}{{ next_post.date | date: "%Y" }}{% endcapture -%}
-    {%- if forloop.first or next_post_year != post_year -%}
+    {%- capture post_previous_year %}{{ post.previous.date | date: "%Y" }}{% endcapture -%}
+    {%- capture post_next_year %}{{ post.next.date | date: "%Y" }}{% endcapture -%}
+    {%- if forloop.first or post_next_year != post_year -%}
     {%- assign year_post_count = 0 -%}
     <div class="list-post">
       <h2 id="{{post_year}}">{{post_year}}</h2>
@@ -48,7 +44,7 @@ rail_latest_comments: true
           {%- endif %}
         </li>
         {%- assign year_post_count = year_post_count | plus: 1 -%}
-    {%- if forloop.last or next_post_year != post_year %}
+    {%- if forloop.last or post_previous_year != post_year %}
       </ul>
       {%- assign hidden_post_count = year_post_count | minus: 20 -%}
       {%- if hidden_post_count > 0 %}

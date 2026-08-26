@@ -19,9 +19,6 @@ url: 'https://uhaiin.com/kafka'
 domainUrl: 'https://uhaiin.com'
 baseurl: '/kafka'
 
-# 首页文章排序：asc 为由远及近，desc 为由近及远
-homePostOrder: 'asc'
-
 # 搜索平台站点验证码；留空时不输出验证标签
 googleSiteVerification: ''
 bingSiteVerification: ''

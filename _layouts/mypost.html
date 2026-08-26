@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% include head.html -%}
+<body ondragstart="return false;">
+<!--
+  THESIS: Kafka：从 0 基础到大师 is a standalone technical reading site.
+  OWN-WORLD: cool neutral ground, precise ink, one cobalt reading accent, hairline records.
+  STORY: scan the archive, open a note, keep code, tables and traces in one measured system.
+  FIRST VIEWPORT: a working index, not a marketing hero.
+  FORM: 760px reading measure, fixed research side panels on desktop, restrained motion.
+  FINISH: accessible focus, balanced dark mode, quiet hierarchy. Seed key: ce797c2e.
+-->
+<a class="skip-link" href="#main">跳到正文</a>
+{% include header.html -%}
+{%- assign primary_category = page.categories | first -%}
+{%- assign related_count = 0 -%}
+{%- for post in site.categories[primary_category] -%}
+  {%- unless post.url == page.url -%}
+    {%- assign related_count = related_count | plus: 1 -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- if related_count > 0 -%}
+<aside class="post-recommendations" aria-label="猜你喜欢">
+  <h2>猜你喜欢</h2>
+  <ul>
+    {%- assign shown_count = 0 -%}
+    {%- for post in site.categories[primary_category] reversed -%}
+      {%- if shown_count >= 20 -%}
+        {%- break -%}
+      {%- endif -%}
+      {%- unless post.url == page.url -%}
+        <li>
+          <a href="{{ site.baseurl | append: post.url }}" title="{{ post.title | escape }}">{{ post.title }}</a>
+        </li>
+        {%- assign shown_count = shown_count | plus: 1 -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</aside>
+{%- endif -%}
+<main id="main" class="page page-post{% if page.body_class %} {{ page.body_class }}{% endif %}" data-counter-key="{{ page.url | remove: '/' | prepend: 'post-' }}">
+  <h1 class="title" id="{{ page.title }}">{{ page.title }}</h1>
+  {% if page.date %}
+  <div class="subtitle">{{ page.author | default: site.author }} 于 {{ page.date | date: "%Y-%m-%d" }} 发布</div>
+  {% endif %}
+  <div class="post">
+    {{ content }}
+  </div>
+  {%- if site.extGiscus and page.date and page.comments != false and site.giscus.categoryId != blank -%}
+  {% include ext-giscus.html %}
+  {%- endif %}
+</main>
+{% include footer.html -%}
+{% include script.html -%}
+</body>
+</html>

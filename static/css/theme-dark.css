@@ -1,0 +1,48 @@
+html.dark {
+  color-scheme: dark;
+  --page-bg: #101316;
+  --surface: #171b20;
+  --surface-soft: #20262c;
+  --surface-raise: rgba(23, 28, 33, 0.92);
+  --header-bg: rgba(16, 19, 22, 0.9);
+  --text: #e7eaee;
+  --text-soft: #c5cbd2;
+  --text-muted: #a1a9b3;
+  --hairline: #2b3137;
+  --hairline-soft: #242a2f;
+  --hairline-strong: #3a4249;
+  --accent: #7aa7ff;
+  --accent-soft: rgba(122, 167, 255, 0.13);
+  --accent-border: rgba(122, 167, 255, 0.5);
+  --accent-focus: rgba(122, 167, 255, 0.18);
+  --accent-underline: rgba(122, 167, 255, 0.42);
+  --on-accent: #101316;
+  --selection-bg: rgba(122, 167, 255, 0.28);
+  --scrollbar-thumb: rgba(231, 234, 238, 0.28);
+  --danger: #ff8f85;
+  --success: #72d693;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.34);
+  --shadow-raise: 0 2px 10px rgba(0, 0, 0, 0.32);
+  --code-bar: #313941;
+  --code-bg: #151a1f;
+  --code-inline-text: #d7dde4;
+  --control-border: rgba(231, 234, 238, 0.14);
+  --control-bg: rgba(32, 38, 44, 0.92);
+  --control-bg-hover: #283037;
+  --table-stripe: rgba(32, 38, 44, 0.42);
+  --success-border: rgba(114, 214, 147, 0.38);
+  --danger-border: rgba(255, 143, 133, 0.38);
+  --overlay: rgba(4, 6, 8, 0.68);
+}
+
+html.dark #theme-toggle .theme-icon-light {
+  display: none;
+}
+
+html.dark .page-search .list-search .hint {
+  color: #ff706b;
+}
+
+html.dark #theme-toggle .theme-icon-dark {
+  display: block;
+}

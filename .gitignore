@@ -1,0 +1,12 @@
+/.idea/
+node_modules/
+__pycache__/
+*.pyc
+/_site/
+/dist/
+/.bundle/
+/vendor/
+/.agents/
+/.codex/
+/.impeccable/
+/skills-lock.json

@@ -1,0 +1,87 @@
+encoding: utf-8
+
+# SEO相关信息
+title: Kafka：从 0 基础到大师
+description: Kafka：从 0 基础到大师，zjc 的独立技术书阅读站
+keywords: Kafka,zjc,读书笔记,技术书,Jekyll
+author: zjc
+footerText: '© 2026 Kafka：从 0 基础到大师 · <a href="mailto:jiancai.zhong.1997@gmail.com">Contact me</a>'
+
+# 这些不要动
+permalink: /posts/:year/:month/:day/:title
+kramdown:
+  auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
+exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'source-assets', 'Gemfile', 'Gemfile.lock', 'blog.sh', 'package.json', 'package-lock.json', 'scripts', 'node_modules']
+
+url: 'https://uhaiin.com/kafka'
+domainUrl: 'https://uhaiin.com'
+baseurl: '/kafka'
+
+# 搜索平台站点验证码；留空时不输出验证标签
+googleSiteVerification: ''
+bingSiteVerification: ''
+baiduSiteVerification: ''
+
+# 菜单
+menu:
+  - title: 首页
+    url: /
+  - title: 分类
+    url: /pages/categories.html
+  - title: 搜索
+    url: /pages/search.html
+  - title: 书签
+    url: /pages/links.html
+  - title: 关于
+    url: /pages/about.html
+
+# 点击页面文字冒出特效,不需要请设置为false
+extClickEffect: false
+# 数学公式支持，比较影响加载速度,不需要请设置为false
+extMath: true
+# Mermaid图表渲染，不需要请设置为false
+extMermaid: true
+# 文章二维码，不需要请设置为false
+extQrCode: true
+# 文章评论，基于 GitHub Discussions；categoryId 为空时不输出评论区
+extGiscus: true
+# 页面右下角主题切换按钮，不需要请设置为false
+extThemeToggle: true
+# PWA离线缓存，不需要请设置为false
+extServiceWorker: true
+# 文章打开次数与首页热门文章；Abacus 兼容接口可替换为自己的计数服务
+pageViewEndpoint: 'https://abacus.jasoncameron.dev'
+pageViewNamespace: 'uhaiin.com/kafka'
+
+# giscus 评论配置
+giscus:
+  repo: 'springvortex/springvortex.github.io'
+  repoId: 'R_kgDOT-vqdw'
+  category: 'Announcements'
+  categoryId: 'DIC_kwDOT-vqd84DEBBF'
+
+# 书签
+links:
+  - title: Download Chrome
+    url: https://www.google.cn/chrome/
+  - title: ip Address
+    url: https://www.ipaddress.com/
+  - title: Hello Windows
+    url: https://hellowindows.cn/
+  - title: MSDN
+    url: https://msdn.itellyou.cn/
+  - title: 阿里云云效 Maven
+    url: https://developer.aliyun.com/mvn/guide
+  - title: GitHub 加速
+    url: https://github.com/521xueweihan/GitHub520
+  - title: LeanCloud
+    url: https://console.leancloud.cn/apps
+  - title: Dism++
+    url: https://dism.cf/
+  - title: 阿里巴巴矢量图库
+    url: https://www.iconfont.cn/
+  - title: ContextMenuManager
+    url: https://github.com/BluePointLilac/ContextMenuManager
+  

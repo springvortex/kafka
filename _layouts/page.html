@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% include head.html -%}
+<body class="{{ page.body_class }}" ondragstart="return false;">
+<!--
+  THESIS: Kafka：从 0 基础到大师 is a standalone technical reading site.
+  OWN-WORLD: cool neutral ground, precise ink, one cobalt reading accent, hairline records.
+  STORY: scan the archive, open a note, keep code, tables and traces in one measured system.
+  FIRST VIEWPORT: a working index, not a marketing hero.
+  FORM: 760px reading measure, fixed research side panels on desktop, restrained motion.
+  FINISH: accessible focus, balanced dark mode, quiet hierarchy. Seed key: ce797c2e.
+-->
+<a class="skip-link" href="#main">跳到正文</a>
+{% include header.html -%}
+{%- if page.category_index -%}
+{% include category-index.html %}
+{%- endif -%}
+{%- if page.popular_index -%}
+{% include popular-index.html %}
+{%- endif -%}
+{%- if page.popular_searches -%}
+{% include popular-searches.html %}
+{%- endif %}
+{{ content }}
+{%- if page.right_rail -%}
+{% include right-rail.html %}
+{%- endif %}
+{% include footer.html -%}
+{% include script.html -%}
+</body>
+</html>

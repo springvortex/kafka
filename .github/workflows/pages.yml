@@ -53,7 +53,7 @@ jobs:
           npm run minify -- _site
 
       - name: Check generated site
-        run: npm run check -- _site
+        run: npm run check -- _site /kafka
 
       - name: Audit npm dependencies
         run: npm audit --audit-level=low --registry=https://registry.npmjs.org

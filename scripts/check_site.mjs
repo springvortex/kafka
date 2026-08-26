@@ -6,6 +6,7 @@ import { transform } from 'esbuild'
 import { fileURLToPath } from 'node:url'
 
 const siteDir = path.resolve(process.argv[2] || '_site')
+const baseurl = (process.argv[3] || '').replace(/\/+$/, '')
 const htmlRoot = path.join(siteDir)
 const xmlFiles = [
   path.join(siteDir, 'static/xml/search.xml'),
@@ -55,7 +56,15 @@ function targetExists(root, currentDir, href) {
     return true
   }
 
-  const decoded = decodePath(withoutQuery)
+  let decoded = decodePath(withoutQuery)
+  if (baseurl) {
+    if (decoded === baseurl) {
+      decoded = '/'
+    } else if (decoded.startsWith(`${baseurl}/`)) {
+      decoded = decoded.slice(baseurl.length)
+    }
+  }
+
   const target = decoded.startsWith('/')
     ? path.join(root, `.${decoded}`)
     : path.resolve(currentDir, decoded)

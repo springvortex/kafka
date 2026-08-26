@@ -33,9 +33,11 @@ npm ci
 url: 'https://uhaiin.com/kafka'
 domainUrl: 'https://uhaiin.com'
 baseurl: '/kafka'
+homePostOrder: 'asc'
 ```
 
 其中 `url` 保存书籍站点的完整地址；模板实际输出 canonical、RSS 和 sitemap 时，使用 `domainUrl + baseurl`，因此 `domainUrl` 保留域名根地址，避免 `/kafka/kafka/` 这种重复路径。
+`homePostOrder` 控制首页文章顺序：`asc` 按发布时间由远及近，当前用于附录在前、章节从第 1 章开始递增；`desc` 按发布时间由近及远。
 
 访问计数与 CI 生成热门文章时使用 `uhaiin.com/kafka` 命名空间，避免和其他书站的数据混在一起。
 

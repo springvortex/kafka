@@ -39,6 +39,8 @@ menu:
 
 # Recommended Reading
 recommendedReading:
+  - title: springvortex
+    url: https://uhaiin.com/
   - title: ClickHouse 零基础实战指南
     url: https://uhaiin.com/clickhouse/
   - title: 计算机网络 零基础实战指南
